@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @campaign.title %>
+</p>
+
+<p>
+  <strong>Deadline date:</strong>
+  <%= @campaign.deadline_date %>
+</p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @campaign.goal %>
+</p>
+
+<p>
+  <strong>Funded:</strong>
+  <%= @campaign.funded %>
+</p>
+
+<p>
+  <strong>Current total:</strong>
+  <%= @campaign.current_total %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @campaign.location %>
+</p>
+
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', campaigns_path %>
