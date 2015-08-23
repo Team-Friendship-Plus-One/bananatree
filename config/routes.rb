@@ -6,14 +6,20 @@ Rails.application.routes.draw do
     get 'signout', :to => 'devise/sessions#destroy'
   end
 
+      resources :users
+
+
+ match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+
+
   get '/team' => 'home#team'
   resources :cities
 
   resources :campaigns do
     resources :donations
   end
-
   resources :clients
+
 end
 # Prefix Verb   URI Pattern                                          Controller#Action
 #   root GET    /                                                    home#index
