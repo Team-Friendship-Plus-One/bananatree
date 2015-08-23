@@ -45,7 +45,7 @@ class ClientsController < ApplicationController
               end
             end
             countOfClients = Client.where(:location => campaign.location).count
-            newCampaign = Campaign.create({:title => (city.city.to_s + "Campaign"), 
+            newCampaign = Campaign.create({:title => (city.city.to_s + " Campaign"), 
                              :deadline_date => timezoneTime(city.timezone).to_date, 
                              :goal => (60*countOfClients), 
                              :funded => false, 
