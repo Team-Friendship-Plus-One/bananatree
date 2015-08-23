@@ -18,7 +18,16 @@
         <li><a href="#"><i class="fa fa-money"> Donate</i></a></li>
         <li><a href="/team"><i class="fa fa-users"> The Team</i></a></li>
         <li><a href="#"><i class="fa fa-envelope"> Contact</i></a></li>
-        <li><a href="#">Signup/Login</a></li>
+        
+        <li>
+          <% if current_user != nil %>
+          <%= link_to "Sign out", signout_path, id: "sign_out" %>
+          <% else %>
+           <%= link_to "Log In with Twitter", user_omniauth_authorize_path(:twitter) %><br/>
+            <%= link_to "Sign Up", new_user_registration_path %><br/>
+            <%= link_to "Log In", new_user_session_path %><br/>
+        <% end %>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
