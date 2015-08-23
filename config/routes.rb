@@ -9,8 +9,6 @@ Rails.application.routes.draw do
   get '/team' => 'home#team'
   resources :cities
 
-
-
   resources :campaigns do
     resources :donations
   end
