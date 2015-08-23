@@ -30,5 +30,30 @@
   <%= @campaign.location %>
 </p>
 
+<div id="card-form">
+  <%= form_tag({controller: 'campaigns', action: 'pay'}, method: :post, id: 'simplify-payment-form') do %>
+    <div>
+      <%= label_tag('cc-number', 'Credit Card Number:') %>
+      <%= text_field_tag('cc-number', nil, maxlength: 20, autocomplete: 'off', autofocus: true, value: '5555555555554444') %>
+    </div>
+    <div>
+      <%= label_tag('cc-cvc', 'CVC:') %>
+      <%= text_field_tag('cc-cvc', nil, maxlength: 4, autocomplete: 'off', value: '123') %>
+    </div>
+    <div>
+      <%= label_tag('cc-exp-month', 'Expiry Date:') %>
+      <%= select_month(Date.new(Date.today.year, 1).beginning_of_month, {use_two_digit_numbers: true}, {id: 'cc-exp-month'}) %>
+      <%= select_year(Date.today+5, {start_year: Date.today.year, end_year: Date.today.year+10}, {id: 'cc-exp-year'}) %>
+    </div>
+    <div>
+      <%= label_tag('donation-amount', 'Donation Amount: $') %>
+      <%= text_field_tag('donation-amount', nil, maxlength: 20, autocomplete: 'off', autofocus: true, value: '100') %>
+    </div>
+    <div id="submit-box">
+      <%= submit_tag('Process Payment', id: 'process-payment-btn') %>
+    </div>
+  <% end %>
+</div>
+
 <%= link_to 'Edit', edit_campaign_path(@campaign) %> |
 <%= link_to 'Back', campaigns_path %>
