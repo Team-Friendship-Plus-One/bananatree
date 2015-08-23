@@ -66,7 +66,7 @@ span.icon-bar{
 
  /* FOOTER */
 .footer {
-  margin-top: 40px;
+  margin-top: -40px;
   width: 100%;
   /* Set the fixed height of the footer here */
   background-color: #12073B;
@@ -116,8 +116,7 @@ ul.nav.nav-footer{
 
 @media(max-width: 505px) {
   .theTeam li {
-    margin: 0 auto;
-  }
+    margin: 0 auto  }
 }
 
 /* END TEAM */
@@ -127,16 +126,30 @@ h2.headerOne {
   font-weight: 100;
   color: #12073B, !important;
   font-size: 40px;
-  padding-left: 46px;
+  padding-left: 5px;
+  text-align: center;
+  line-height: 157%;
 }
 
 div.landingbox{
   padding: 15px;
 }
 
-div.li{
-  display: inline-block;
+
+a.listLanding{
+    margin-right: 27px;
+    margin-top: 19px;
+    margin-bottom: 13px;
+    margin-left: 53px;
 }
+ul.marginLeftOne{
+  margin-left: -5px
+}
+ul.marginLeft{
+  margin-left: -5px
+}
+
+
 /*FLASH MESSAGES
 */
 .alert-error {
