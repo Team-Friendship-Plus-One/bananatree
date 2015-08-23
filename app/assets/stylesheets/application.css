@@ -15,8 +15,13 @@
  *= require font-awesome
  *= require_tree .
  *= require_self
+  
 
  */
+ .page-title {
+  text-align: center;
+  padding-top: 10px;
+ }
  /* FOOTER */
 
 .footer {
