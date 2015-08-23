@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     resources :donations
   end
   resources :clients
-  resources :donations
 end
 # Prefix Verb   URI Pattern                                          Controller#Action
 #   root GET    /                                                    home#index

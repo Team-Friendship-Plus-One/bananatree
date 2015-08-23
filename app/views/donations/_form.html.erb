@@ -13,16 +13,9 @@
 
   <div class="field">
     <%= f.label :amount %><br>
-    <%= f.text_field :amount %>
+    <%= f.number_field :amount, :class => 'text_field', :step => 1 %>
   </div>
-  <div class="field">
-    <%= f.label :campaign_id %><br>
-    <%= f.number_field :campaign_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

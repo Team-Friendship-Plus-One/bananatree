@@ -14,7 +14,7 @@ class DonationsController < ApplicationController
 
   # GET /donations/new
   def new
-    @donation = Donation.new
+    @donation = Donations.new
   end
 
   # GET /donations/1/edit
@@ -24,7 +24,8 @@ class DonationsController < ApplicationController
   # POST /donations
   # POST /donations.json
   def create
-    @donation = Donation.new(donation_params)
+    @donation = current_user.donation.new(donation_params)
+    @donation.campaign_id = params[:campaign_id]
 
     respond_to do |format|
       if @donation.save
@@ -69,6 +70,6 @@ class DonationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def donation_params
-      params.require(:donation).permit(:amount, :campaign_id, :user_id)
+      params.require(:donation).permit(:amount)
     end
 end
