@@ -16,7 +16,12 @@
  *= require_tree .
  *= require_self
 
+
  */
+ .page-title {
+  text-align: center;
+  padding-top: 10px;
+ }
  /* FOOTER */
 
 .footer {
@@ -70,6 +75,7 @@
 }
 
 /* END TEAM */
+<<<<<<< HEAD
 
 /*FLASH MESSAGES
 */
