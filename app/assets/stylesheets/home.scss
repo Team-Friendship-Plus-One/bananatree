@@ -3,18 +3,35 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .jumbotron {
     position: relative;
-    color: #FFE2AA;
+    color: white;
     text-align: center;
     background: url("http://aattp.org/wp-content/uploads/2014/12/homeless-.jpg") center center;
     width: 100%;
     height: 100vh;
     background-size: cover;
     overflow: hidden;
-    // text-shadow: 0px 0px 10px black;
-    // -webkit-text-stroke-width: 1px;
-    // -webkit-text-stroke-color: black;
-    // padding-top: 0px;
+    letter-spacing: 0.06em;
+    margin-bottom: -10px
+  }
+h1{
+  margin-top: 10px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 70px;
 }
+h1.havenly{
+  margin-top: 16px;
+}
+h2{
+  letter-spacing: 0.15em;
+  font-weight: 800;
+  font-size: 35px;
+}
+.marginTop{
+  margin-top: 200px;
+}
+
 .bg-overlay {
   height: 100vh;
   margin-top: -17px;
@@ -30,7 +47,11 @@
 }
 
 .campaign{
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-weight: 100;
   padding-top: 20px;
+  margin-top: 300px;
 }
 
 .blah{
@@ -61,7 +82,10 @@
     background-color: transparent;
     color: inherit;
     transition: all .5s;
-    border: solid #FFE2AA 4px;
+    border: solid white 4px;
+    letter-spacing: 0.10em;
+    font-weight: 100;
+
 }
 .btn-xlarge {
     padding: 18px 28px;
