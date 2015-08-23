@@ -1,0 +1,29 @@
+.campaign-info {
+	margin: 0 auto;
+	max-width: 800px;
+	background-color: #aaa;
+	text-align: center;
+}
+
+.progress {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.btn-donate {
+	margin: 10px 0;
+	height: 50px;
+	font-size: 32px;
+}
+
+.modal-content {
+	padding: 50px;
+	display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.paymentForm {
+	width: 400px;
+	margin: 0 auto;
+}
