@@ -40,6 +40,9 @@ gem 'simplify', '~> 1.1.2'
 
 # Add XML to JSON gem
 gem 'json'
+
+# FONT AWESOME 
+gem 'font-awesome-rails'
 #twitterdev/cannonball-web
 
 group :development, :test do

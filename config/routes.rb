@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'payment/index'
+
+  post 'campaigns/pay'
+
   root 'home#index'
   # this is for users omniauth_callbacks controller:
   devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", omniauth_callbacks: "users/omniauth_callbacks" }
@@ -6,16 +10,20 @@ Rails.application.routes.draw do
     get 'signout', :to => 'devise/sessions#destroy'
   end
 
+      resources :users
+
+
+ match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+
+
   get '/team' => 'home#team'
   resources :cities
-
-
 
   resources :campaigns do
     resources :donations
   end
-
   resources :clients
+
 end
 # Prefix Verb   URI Pattern                                          Controller#Action
 #   root GET    /                                                    home#index

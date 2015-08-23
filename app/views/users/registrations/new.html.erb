@@ -2,27 +2,48 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
-<%=link_to user_omniauth_authorize_path(:twitter)%>
-
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
+  <div class="form-group">
+      <%= f.label :email %>
+      <div class="controls">
+        <%= f.text_field :email, :value => '', class: 'form-control input-lg', placeholder: 'Example: email@me.com' %>
+      </div>
+    </div>
+  <div class="form-group">
     <%= f.label :password %>
+    <div class="controls">
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <% end %>
+    <%= f.password_field :password, class: 'form-control input-lg', autocomplete: "off" %>
+  </div>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+     <div class="controls">
+    <%= f.password_field :password_confirmation, class: 'form-control input-lg', autocomplete: "off" %>
+    </div>
   </div>
+
+  <div class="form-group">
+      <%= f.label :first_name %>
+      <div class="controls">
+        <%= f.text_field :first_name, :autofocus => true, :value => '', class: 'form-control input-lg' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :last_name %>
+      <div class="controls">
+        <%= f.text_field :last_name, :value => '', class: 'form-control input-lg' %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :location %>
+      <div class="controls">
+        <%= f.text_field :location, :value => '', class: 'form-control input-lg' %>
+      </div>
+    </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
