@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
-<<<<<<< HEAD
   get '/team' => 'home#team'
-||||||| merged common ancestors
-=======
   devise_for :users
->>>>>>> dev
   resources :campaigns do
     resources :donations
   end
