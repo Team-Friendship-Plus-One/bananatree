@@ -7,7 +7,7 @@
     text-align: center;
     background: url("http://aattp.org/wp-content/uploads/2014/12/homeless-.jpg") center center;
     width: 100%;
-    height: 600px;
+    height: 500px;
     background-size: cover;
     overflow: hidden;
     text-shadow:
@@ -21,4 +21,24 @@
 
 .campaign{
   padding-top: 20px;
+}
+
+.blah{
+  text-align: center;
+}
+.looking{
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.list{
+  text-align: left;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+#donatenow{
+  text-align: center;
+  height: 50px;
+  margin: 20px;
 }
