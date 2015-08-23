@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   root 'home#index'
+  # this is for users omniauth_callbacks controller:
+  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", omniauth_callbacks: "users/omniauth_callbacks" }
+    devise_scope :user do
+    get 'signout', :to => 'devise/sessions#destroy'
+  end
+
   get '/team' => 'home#team'
   resources :cities
 
-  devise_for :users do
-    resources :donations
-  end
+
 
   resources :campaigns do
     resources :donations
