@@ -3,25 +3,28 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .jumbotron {
     position: relative;
-    color: #D4B06A;
+    color: #FFE2AA;
     text-align: center;
     background: url("http://aattp.org/wp-content/uploads/2014/12/homeless-.jpg") center center;
     width: 100%;
     height: 100vh;
     background-size: cover;
     overflow: hidden;
-    text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    // text-shadow: 0px 0px 10px black;
     // -webkit-text-stroke-width: 1px;
     // -webkit-text-stroke-color: black;
+    // padding-top: 0px;
 }
 .bg-overlay {
-  height: 100%;
+  height: 100vh;
+  margin-top: -17px;
   background: rgba(0,0,0,0.5);
 }
+
+.wrapper{
+  padding: 10%;
+}
+
 .navbar-custom{
   color: #12073B;
 }
@@ -54,7 +57,20 @@
   height: 50px;
   margin: 20px;
 }
-
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+    border: solid #FFE2AA 4px;
+}
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }
 .bottomtext {
   font-size: 14px;
 }
