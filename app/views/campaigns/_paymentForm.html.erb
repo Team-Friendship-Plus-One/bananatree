@@ -58,11 +58,11 @@
           </div>
         </div>
       </div>
-      <%= hidden_field :campaignId, :id, :value => campaign.id %>
+      <%= hidden_field :campaignId, :id, :value => @campaign.id %>
 
     <div id="submit-box">
       <%= submit_tag('Process Payment', id: 'process-payment-btn', class: "btn-large") %>
     </div>
-    <div id="buy-with-masterpass-div"></div>
   <% end %>
+  <div id="buy-with-masterpass-div"></div>
 </div>

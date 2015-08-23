@@ -16,9 +16,23 @@
  *= require_tree .
  *= require_self
 
+ #dfdff0
+ #bfc2d9
+ #75a3ba
+ #71868a
+ #f7d669
+ #fce7bd
 
  */
+<<<<<<< HEAD
 .page-title {
+=======
+ .list {
+  list-style: square;
+  color: #887CB0;
+ }
+ .page-title {
+>>>>>>> bb4977cb3e3296a1c81d801de29dfdb2dd24f369
   text-align: center;
   padding-top: 10px;
  }
