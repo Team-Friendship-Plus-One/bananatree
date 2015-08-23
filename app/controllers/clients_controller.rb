@@ -26,9 +26,8 @@ class ClientsController < ApplicationController
   def create
     @client = Client.new(client_params)
     @campaign = Campaign.where(:location => @client.location)
-
     # if there an existing campaign
-    if @campaign.length != 0
+    if @campaign.length == 0
       @campaign.each do |campaign|
         city = City.find_by(:city => campaign.location)
 
