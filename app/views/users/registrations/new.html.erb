@@ -3,7 +3,7 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-<%=link_to user_omniauth_authorize_path(:twitter)%>
+<%= link_to user_omniauth_authorize_path(:twitter)%>
 
 
   <div class="field">
