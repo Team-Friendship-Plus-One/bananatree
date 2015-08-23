@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .jumbotron {
     position: relative;
-    color: white;
+    color: #D4B06A;
     text-align: center;
     background: url("http://aattp.org/wp-content/uploads/2014/12/homeless-.jpg") center center;
     width: 100%;
@@ -17,6 +17,10 @@
     1px 1px 0 #000;
     // -webkit-text-stroke-width: 1px;
     // -webkit-text-stroke-color: black;
+}
+
+.navbar-custom{
+  color: #12073B;
 }
 
 .campaign{
@@ -42,3 +46,4 @@
   height: 50px;
   margin: 20px;
 }
+
