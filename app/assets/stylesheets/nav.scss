@@ -1,0 +1,26 @@
+.navbar
+{
+  background-color: #12073B;
+}
+
+.navbar-brand, .navbar-right a{
+  color: #FFE2AA !important;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .dropdown-menu{
+  background-color: #605292 !important;
+}
+
+
+
+// Colors:
+// Base:     #403075
+// Dark:     #12073B
+// Dark:     #261758
+// Light:    #605292
+// Lighter:  #887CB0
+// BrownBase:   #AA8439
+// BrownDark:   #553800
+// BrownDark:   #805B15
+// BrownLight:  #D4B06A
+// BrownLight:  #FFE2AA

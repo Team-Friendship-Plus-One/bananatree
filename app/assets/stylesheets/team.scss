@@ -1,0 +1,53 @@
+/* FOOTER */
+
+.footer {
+  margin-top: 40px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  background-color: #f5f5f5;
+  text-align: center;
+  clear: both;
+}
+
+.nav-footer li {
+  display: inline-block;
+}
+
+/* END FOOTER */
+
+/* THE TEAM */
+
+.team {
+  text-align: center;
+}
+
+.theTeam {
+  padding: 0;
+}
+
+.theTeam li {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 50px 50px;
+}
+
+.theTeam-img {
+  width: 150px;
+  border-radius: 50%;
+}
+.social-icon a {
+  display: inline-block;
+}
+
+.social-icon a:hover {
+  background-color: transparent;
+  opacity: .5;
+}
+
+@media(max-width: 505px) {
+  .theTeam li {
+    margin: 0 auto;
+  }
+}
+
+/* END TEAM */
