@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  get '/team' => 'home#team'
+  
+  resources :cities
+
+  devise_for :users do
+    resources :donations
+  end
+
   resources :campaigns do
     resources :donations
   end
