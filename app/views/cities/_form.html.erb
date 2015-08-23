@@ -19,6 +19,10 @@
     <%= f.label :state %><br>
     <%= f.text_field :state %>
   </div>
+  <div class="field">
+    <%= f.label :timezone %><br>
+    <%= f.select :timezone, [["Pacific", "Pacific"], ["Mountain", "Mountain"], ["Central", "Central"], ["Eastern", "Eastern"], ["Alaska", "Alaska"], ["Hawaii", "Hawaii"]], {:prompt => 'Select Timezone'} %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
