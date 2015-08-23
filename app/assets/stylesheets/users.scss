@@ -4,6 +4,12 @@
 img.profile{
   width: 220px;
 }
+h1{
+color: white;
+}
+h5{
+  display: block;
+}
 h6{
 color: white;
 text-transform: uppercase;
@@ -11,17 +17,32 @@ letter-spacing: 0.06em;
 font-weight: 100;
 margin-left: 5px;
 }
+p{
+  letter-spacing: 0.06em;
+  font-weight: 100;
+  color: #887CB0;
+}
 h3.profileName{
 text-transform: uppercase;
 letter-spacing: 0.06em;
-margin-left: 5px;
-display: inline-block
+display: block;
+text-align: center;
 }
-h4.profileLocation{
+h3.profileLocation{
 text-transform: uppercase;
 letter-spacing: 0.05em;
-margin-left: 50px;
-display: inline-block
+font-weight: 200;
+display: block;
+text-align: center;
+}
+h3.donationHistory{
+text-transform: uppercase;
+color: #887CB0;
+letter-spacing: 0.06em;
+font-weight: 100;
+margin-left: 5px;
+display: block;
+float: left;
 }
 span.crop{
 display: inline-block;
@@ -35,15 +56,26 @@ overflow: hidden;
 div#countdown{
 
 }
+.space{
+  margin-left: 10px;
+}
+div.box{
+height:100px;
+background-color: #261758;
+padding-top: 10px;
+}
 
 div.boxOne{
 height:100px;
-background-color: #E8313A;
+background-color: #261758;
 }
 div.boxTwo{
-background-color: #E85A61;
+background-color: #605292;
 height:100px;
-
+}
+#twitter{
+  width: 30px;
+  margin-left: 48%;
 }
 
 
@@ -57,7 +89,7 @@ text-transform: uppercase;
 letter-spacing: 0.06em;
 margin-left: 5px;
 }
-h4.profileLocation{
+.profileLocation{
 text-transform: uppercase;
 letter-spacing: 0.05em;
 margin-left: 50px;
@@ -82,6 +114,5 @@ background-color: #E8313A;
 div.boxTwo{
 background-color: #E85A61;
 height:100px;
-
 }
 }

@@ -12,8 +12,6 @@ class User < ActiveRecord::Base
       user.username = auth.info.nickname   # assuming the user model has a name
       user.name = auth.info.name
       user.image = auth.info.image[0...-12]+".jpeg" # assuming the user model has an image
-      binding.pry
-      user.location = auth.info.location
       user.oauth_token = auth.credentials.token
       user.uid = auth.uid
       user.provider = auth.provider
