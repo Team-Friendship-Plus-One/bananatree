@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
       if current_user.email == ""
           finish_signup_path(current_user)
         else
-        root_path
+        user_path(current_user)
       end
       else
          new_user_session_path
