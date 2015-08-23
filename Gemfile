@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
@@ -22,7 +21,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'devise'
+gem "figaro"
+gem 'omniauth'
+gem 'omniauth-twitter'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
@@ -33,13 +35,12 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 
-# Add Simplify 
+# Add Simplify
 gem 'simplify', '~> 1.1.2'
 
 # Add XML to JSON gem
 gem 'json'
-
-
+#twitterdev/cannonball-web
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
