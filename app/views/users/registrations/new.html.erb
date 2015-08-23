@@ -1,53 +1,57 @@
-<h2>Sign up</h2>
+<div class="signupPage">
+  <h2 class="page-title">SIGN UP</h2>
+  <div class="signupForm">
+    <% twitter = image_tag("https://g.twimg.com/dev/sites/default/files/images_documentation/sign-in-with-twitter-gray.png", :alt => "twitter", :class => "twitter") %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-  <div class="form-group">
-      <%= f.label :email %>
-      <div class="controls">
-        <%= f.text_field :email, :value => '', class: 'form-control input-lg', placeholder: 'Example: email@me.com' %>
+      <%= link_to twitter, user_omniauth_authorize_path(:twitter) %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="form-group">
+          <%= f.label :email %>
+          <div class="controls">
+            <%= f.text_field :email, :autofocus => true, :value => '', class: 'form-control input-lg', placeholder: 'email@me.com' %>
+          </div>
+        </div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <div class="controls">
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, class: 'form-control input-lg', autocomplete: "off" %>
       </div>
-    </div>
-  <div class="form-group">
-    <%= f.label :password %>
-    <div class="controls">
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation %><br />
+         <div class="controls">
+        <%= f.password_field :password_confirmation, class: 'form-control input-lg', autocomplete: "off" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <%= f.label :first_name %>
+          <div class="controls">
+            <%= f.text_field :first_name, :value => '', class: 'form-control input-lg' %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :last_name %>
+          <div class="controls">
+            <%= f.text_field :last_name, :value => '', class: 'form-control input-lg' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :location %>
+          <div class="controls">
+            <%= f.text_field :location, :value => '', class: 'form-control input-lg' %>
+          </div>
+        </div>
+
+      <div class="actions">
+        <%= f.submit "Sign Up", class: "btn btn-large" %>
+      </div>
     <% end %>
-    <%= f.password_field :password, class: 'form-control input-lg', autocomplete: "off" %>
   </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :password_confirmation %><br />
-     <div class="controls">
-    <%= f.password_field :password_confirmation, class: 'form-control input-lg', autocomplete: "off" %>
-    </div>
-  </div>
-
-  <div class="form-group">
-      <%= f.label :first_name %>
-      <div class="controls">
-        <%= f.text_field :first_name, :autofocus => true, :value => '', class: 'form-control input-lg' %>
-      </div>
-    </div>
-    <div class="form-group">
-      <%= f.label :last_name %>
-      <div class="controls">
-        <%= f.text_field :last_name, :value => '', class: 'form-control input-lg' %>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :location %>
-      <div class="controls">
-        <%= f.text_field :location, :value => '', class: 'form-control input-lg' %>
-      </div>
-    </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>
