@@ -5,15 +5,16 @@ Rails.application.routes.draw do
     devise_scope :user do
     get 'signout', :to => 'devise/sessions#destroy'
   end
-  resources :users do
-    resources :donations
-  end
+
+  get '/team' => 'home#team'
+  resources :cities
+
+
+
   resources :campaigns do
     resources :donations
   end
-  resources :users do
-    resources :donations
-  end
+
   resources :clients
 end
 # Prefix Verb   URI Pattern                                          Controller#Action
