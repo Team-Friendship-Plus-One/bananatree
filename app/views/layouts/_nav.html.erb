@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -18,7 +18,7 @@
         <li><a href="#"><i class="fa fa-money"> Donate</i></a></li>
         <li><a href="/team"><i class="fa fa-users"> The Team</i></a></li>
         <li><a href="/contact"><i class="fa fa-envelope"> Contact</i></a></li>
-        
+
         <li>
           <% if current_user != nil %>
           <%= link_to "Sign out", signout_path, id: "sign_out" %>
@@ -30,9 +30,9 @@
               <li><%= link_to " Log In with Twitter", user_omniauth_authorize_path(:twitter), :class => "fa fa-twitter" %></li>
               <li><%= link_to " Log In / Signup", new_user_session_path, :class => "fa fa-sign-in" %></li>
             </ul>
-          </li>  
+          </li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  </div> <!-- /.container-fluid -->
 </nav>
