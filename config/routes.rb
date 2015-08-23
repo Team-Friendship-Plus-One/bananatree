@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'payment/index'
+
+  post 'campaigns/pay'
+
   root 'home#index'
   # this is for users omniauth_callbacks controller:
   devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", omniauth_callbacks: "users/omniauth_callbacks" }
