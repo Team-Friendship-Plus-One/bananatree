@@ -8,43 +8,39 @@ class HomeController < ApplicationController
     @existingCampaigns = []
     @cities.each do |city|
       # add all existing campaigns for today into a array
+      campaignExists = false
       @campaigns.each do |campaign|
         if city.city == campaign.location
-          @existingCampaigns.push(campaign)
+          campaignExists = true
         end
       end
-
-      # create campaigns for all cities that do not exist
-      @campaigns.each do |campaign|
-        campaignExists = false
-        @existingCampaigns.each do |exist| 
-          if campaign.location == exist.location
-            campaignExists = true
-          end
-        end
-
-        # if campaign does not exist and there is more than 1 client in that city create a camapaign
-        @client = Client.where(:location => campaign.location)
-
-        if campaignExists == false && @client.count != 0
-
-          city = City.find_by(:city => campaign.location)
-          countOfClients = @client.count
-          Campaign.create({:title => (city.city.to_s + "Campaign"), 
-                           :deadline_date => timezoneTime(city.timezone).to_date, 
-                           :goal => (60*countOfClients), 
-                           :funded => false, 
-                           :current_total => excess, 
-                           :location => campaign.location})
-        end
+      if campaignExists == true
+        @existingCampaigns.push(city.city)
       end
-
-
     end
-    
 
+    # create campaigns for all cities that do not exist
+    @cities.each do |city|
+      campaignExists = false
+      @existingCampaigns.each do |existingCity| 
+        if city.city == existingCity
+          campaignExists = true
+        end
+      end
+      # if campaign does not exist and there is more than 1 client in that city create a camapaign
+      @client = Client.where(:location => city.city)
+      if campaignExists == false && @client.count != 0
 
-
+        city = City.find_by(:city => city.city)
+        countOfClients = @client.count
+        Campaign.create({:title => (city.city.to_s + " Campaign"), 
+                         :deadline_date => timezoneTime(city.timezone).to_date, 
+                         :goal => (60*countOfClients), 
+                         :funded => false, 
+                         :current_total => 0, 
+                         :location => city.city})
+      end
+    end
   end
 
   def team
