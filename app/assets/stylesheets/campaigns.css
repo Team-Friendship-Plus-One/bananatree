@@ -7,16 +7,30 @@
  #fce7bd
 */
 
+.campaign-id:hover {
+	box-shadow: 0;
+	text-decoration: none;
+}
+
 .campaign-info {
 	margin: 10px auto;
 	max-width: 800px;
 	text-align: center;
 	background-color: #dfdff0;
 	padding: 50px;
-	-moz-box-shadow: 0 0 10px #aaa;
-	-webkit-box-shadow: 0 0 10px #aaa;
-	box-shadow: 0 0 10px #aaa;
+	-moz-box-shadow: 10px 10px 10px #aaa;
+	-webkit-box-shadow: 10px 10px 10px #aaa;
+	box-shadow: 10px 10px 10px #aaa;
 	border-radius: 5px;
+}
+
+.campaign-index-info:hover {
+	background-color: #dfdff9;
+}
+
+.campaign-index-info:active {
+	box-shadow: none;
+	background-color:  #dfdff8;
 }
 
 .progress {
@@ -26,8 +40,17 @@
 
 .btn-donate {
 	margin: 20px 0;
-	height: 50px;
+	height: 75px;
 	font-size: 32px;
+	padding: 10px;
+	background-color: #7fb3da;
+	-moz-box-shadow: 4px 4px 10px #aaa;
+	-webkit-box-shadow: 4px 4px 10px #aaa;
+	box-shadow: 4px 4px 10px #aaa;
+}
+
+.btn-donate:hover {
+	background-color: #7fb3f9;
 }
 
 .modal-content {

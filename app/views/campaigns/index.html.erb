@@ -1,8 +1,9 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
     <% @campaigns.each do |campaign| %>
-      <div class="campaign-info">
-        <h1 class="campaignCity"><%= link_to campaign.title, campaign %></h1>
+    <a href="/campaigns/<%= campaign.id %>" class="campaign-id">
+      <div class="campaign-info campaign-index-info">
+        <h1 class="campaignCity"><%= campaign.title %></h1>
         <p>Deadline: <%= campaign.deadline_date.strftime("%m/%d/%Y")  %></p>
         <div class="current">
           <h4>Current Total: <%= number_to_currency(campaign.current_total) %> / Campaign Goal: <%= number_to_currency(campaign.goal) %></h4>
@@ -10,10 +11,8 @@
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%= (campaign.current_total / campaign.goal).to_f * 100 %>%"><%= ((campaign.current_total / campaign.goal).to_f * 100).round(2) %>% Funded!
           </div>
+        </div>
       </div>
-      <div class="donate">
-        <button type="button" class="btn-donate" onclick="location.href='/campaigns/<%= campaign.id %>'">Donate Now!</button>
-      </div>
-    </div>
+    </a>
   <% end %>
 </div>
