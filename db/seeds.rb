@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-cities = City.create([{:city => "San Francisco", :state => "California"}, {:city => "New York", :state => "New York"}, {:city => "Portland", :state => "Oregon"}, {:city => "Chicago", :state => "Illinois"}])
+cities = City.create([{:city => "San Francisco", :state => "California", :timezone => "Pacific"}, {:city => "New York", :state => "New York", :timezone => "Eastern"}, {:city => "Portland", :state => "Oregon", :timezone => "Pacific"}, {:city => "Chicago", :state => "Illinois", :timezone => "Central"}])

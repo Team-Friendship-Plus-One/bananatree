@@ -25,6 +25,39 @@ class ClientsController < ApplicationController
   # POST /clients.json
   def create
     @client = Client.new(client_params)
+    @campaign = Campaign.where(:location => @client.location)
+
+    # if there an existing campaign
+    if @campaign.length != 0
+      @campaign.each do |campaign|
+        city = City.find_by(:city => campaign.location)
+
+        # check if there is a current fund for that city today
+        if campaign.deadline_date != timezoneTime(city.timezone)
+          # if there is no fund for this date
+          # create a fund for this date
+          # if there was a previous fund from the previous day
+          # rollever the extra funds if there are any
+            excess = 0
+            @campaign.each do |otherCamp|
+              if ((otherCamp.deadline_date + 1) == timezoneTime(city.timezone)) && (otherCamp.current_total > otherCamp.funded)
+                excess = otherCamp.current_total - otherCamp.funded
+              end
+            end
+
+            countOfClients = Client.where(:location => campaign.location).count
+            newCampaign = Campaign.create({:title => (city.city.to_s + "Campaign"), 
+                             :deadline_date => timezoneTime(city.timezone).to_date, 
+                             :goal => (60*countOfClients), 
+                             :funded => false, 
+                             :current_total => excess, 
+                             :location => campaign.location})
+        end
+
+      end
+
+    end
+
 
     respond_to do |format|
       if @client.save

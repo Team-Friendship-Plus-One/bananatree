@@ -4,19 +4,29 @@
   <title>BananaTree</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://www.simplify.com/commerce/v1/simplify.js' %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
 </head>
 <body>
+
   <div class="nav">
+
   <% if current_user != nil %>
   Signed in as <strong><%= current_user.email %></strong>!
   <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  <% else %>
+   <%= link_to "Log In with Twitter", user_omniauth_authorize_path(:twitter) %><br/>
+      <%= link_to "Sign Up", new_user_registration_path %><br/>
+        <%= link_to "Log In", new_user_session_path %><br/>
 <% end %>
 </div>
+<%= render "layouts/nav" %>
 <%= render "layouts/messages" %>
 <%= yield %>
-
+<%= console %>
 <%= render 'layouts/footer' %>
+
 </body>
 </html>
