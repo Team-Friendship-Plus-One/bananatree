@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   root 'home#index'
-  devise_for :users
+  # this is for users omniauth_callbacks controller:
+  devise_for :users, controllers: { sessions: "users/sessions", registrations: "users/registrations", omniauth_callbacks: "users/omniauth_callbacks" }
+    devise_scope :user do
+    get 'signout', :to => 'devise/sessions#destroy'
+  end
+  resources :users do
+    resources :donations
+  end
   resources :campaigns do
     resources :donations
   end
@@ -8,7 +15,6 @@ Rails.application.routes.draw do
     resources :donations
   end
   resources :clients
-  resources :donations
 end
 # Prefix Verb   URI Pattern                                          Controller#Action
 #   root GET    /                                                    home#index
