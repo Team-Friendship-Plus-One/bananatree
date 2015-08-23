@@ -6,13 +6,13 @@
          <%= label_tag('donation-amount', ' Donation Amount (in USD)', class: "fa fa-dollar") %>
     </div>
     <div class="form-group">
-        <%= text_field_tag('cc-number', nil, maxlength: 20, autocomplete: 'off', autofocus: true, value: '5555555555554444', class: "form-control input-lg") %>
+        <%= text_field_tag('cc-number', nil, maxlength: 20, autocomplete: 'off', autofocus: true, placeholder: '5555555555554444', class: "form-control input-lg") %>
         <%= label_tag('cc-number', ' Credit Card Number', class: "fa fa-credit-card") %>
     </div>
     <div class="row">
       <div class="col-xs-6 col-sm-6 col-md-6">
         <div class="form-group">
-          <%= text_field_tag('cc-cvc', nil, maxlength: 4, autocomplete: 'off', value: '123', class: "form-control input-lg") %>
+          <%= text_field_tag('cc-cvc', nil, maxlength: 4, autocomplete: 'off', placeholder: '123', class: "form-control input-lg") %>
           <%= label_tag('cc-cvc', 'CVC', class: "fa") %>
         </div>
       </div>
@@ -21,7 +21,8 @@
             <div class="row">
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <select id="cc-exp-month" name="date[month]" class="form-control input-lg">
-                  <option value="1" selected="selected">01</option>
+                  <option selected="selected">MM</option>
+                  <option value="1">01</option>
                   <option value="2">02</option>
                   <option value="3">03</option>
                   <option value="4">04</option>
@@ -38,7 +39,8 @@
               </div>
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <select id="cc-exp-year" name="date[year]" class="form-control input-lg">
-                  <option value="2015" selected="selected">2015</option>
+                  <option selected="selected">YR
+                  <option value="2015">2015</option>
                   <option value="2016">2016</option>
                   <option value="2017">2017</option>
                   <option value="2018">2018</option>
@@ -56,10 +58,11 @@
           </div>
         </div>
       </div>
-      <%= hidden_field :campaignId, :id, :value => campaign.id %>
+      <%= hidden_field :campaignId, :id, :value => @campaign.id %>
 
     <div id="submit-box">
       <%= submit_tag('Process Payment', id: 'process-payment-btn', class: "btn-large") %>
     </div>
   <% end %>
+  <div id="buy-with-masterpass-div"></div>
 </div>

@@ -16,8 +16,18 @@
  *= require_tree .
  *= require_self
 
+ #dfdff0
+ #bfc2d9
+ #75a3ba
+ #71868a
+ #f7d669
+ #fce7bd
 
  */
+ .list {
+  list-style: square;
+  color: #887CB0;
+ }
  .page-title {
   text-align: center;
   padding-top: 10px;
@@ -25,7 +35,8 @@
  /* FOOTER */
 
 .footer {
-  margin-top: 40px;
+  position: relative;
+  bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   background-color: #f5f5f5;
@@ -75,7 +86,6 @@
 }
 
 /* END TEAM */
-<<<<<<< HEAD
 
 /*FLASH MESSAGES
 */

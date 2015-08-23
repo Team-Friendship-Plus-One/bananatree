@@ -4,12 +4,14 @@ class CampaignsController < ApplicationController
   # GET /campaigns
   # GET /campaigns.json
   def index
-    @campaigns = Campaign.all
+    @campaigns = Campaign.order('created_at DESC')
+
   end
 
   # GET /campaigns/1
   # GET /campaigns/1.json
   def show
+    @campaign = Campaign.find(params[:id])
   end
 
   def pay
@@ -21,7 +23,6 @@ class CampaignsController < ApplicationController
 
     @message = payment['paymentStatus']
     campaignId = params[:campaignId][:id].to_i
-
     currentCampaign = Campaign.find_by(:id => campaignId)
     currentCampaign.current_total = currentCampaign.current_total.to_d + params["donation-amount"].to_d
     currentCampaign.save
