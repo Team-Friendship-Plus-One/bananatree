@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .jumbotron {
-    position: relative;
     color: white;
     text-align: center;
     background: url("http://aattp.org/wp-content/uploads/2014/12/homeless-.jpg") center center;
@@ -11,6 +10,7 @@
     background-size: cover;
     overflow: hidden;
     letter-spacing: 0.06em;
+
   }
 
 h1{
