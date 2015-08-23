@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.collection_select :location, City.all, :id, :city, :prompt => "Select City.." %>
+    <%= f.collection_select :location, City.all, :city, :city, :prompt => "Select City.." %>
   </div>
   <div class="field">
     <%= f.label :special_notes %><br>
