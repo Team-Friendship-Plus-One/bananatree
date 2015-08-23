@@ -1,8 +1,22 @@
+/*
+ #dfdff0
+ #bfc2d9
+ #75a3ba
+ #71868a
+ #f7d669
+ #fce7bd
+*/
+
 .campaign-info {
-	margin: 0 auto;
+	margin: 10px auto;
 	max-width: 800px;
-	background-color: #aaa;
 	text-align: center;
+	background-color: #dfdff0;
+	padding: 50px;
+	-moz-box-shadow: 0 0 10px #aaa;
+	-webkit-box-shadow: 0 0 10px #aaa;
+	box-shadow: 0 0 10px #aaa;
+	border-radius: 5px;
 }
 
 .progress {
@@ -11,7 +25,7 @@
 }
 
 .btn-donate {
-	margin: 10px 0;
+	margin: 20px 0;
 	height: 50px;
 	font-size: 32px;
 }
@@ -23,7 +37,25 @@
   vertical-align: middle;
 }
 
+#buy-with-masterpass-div {
+	text-align: center;
+	margin: 20px 0;
+}
+
 .paymentForm {
 	width: 400px;
 	margin: 0 auto;
+}
+
+.progress {
+	height: 50px;
+}
+
+.progress-bar {
+	font-size: 24px;
+	line-height: 48px;
+}
+
+.campaignCity {
+	color: #337ab7;
 }

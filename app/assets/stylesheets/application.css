@@ -16,8 +16,18 @@
  *= require_tree .
  *= require_self
 
+ #dfdff0
+ #bfc2d9
+ #75a3ba
+ #71868a
+ #f7d669
+ #fce7bd
 
  */
+ .list {
+  list-style: square;
+  color: #887CB0;
+ }
  .page-title {
   text-align: center;
   padding-top: 10px;
