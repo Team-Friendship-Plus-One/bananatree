@@ -23,7 +23,6 @@ class CampaignsController < ApplicationController
 
     @message = payment['paymentStatus']
     campaignId = params[:campaignId][:id].to_i
-    binding.pry
     currentCampaign = Campaign.find_by(:id => campaignId)
     currentCampaign.current_total = currentCampaign.current_total.to_d + params["donation-amount"].to_d
     currentCampaign.save
