@@ -14,6 +14,19 @@
  *= require font-awesome
  *= require_tree .
  *= require_self
+<<<<<<< HEAD
+||||||| merged common ancestors
+
+ #dfdff0
+ #bfc2d9
+ #75a3ba
+ #71868a
+ #f7d669
+ #fce7bd
+
+=======
+
+
  */
 .page-title {
   text-align: center;
@@ -183,3 +196,4 @@ div.purple{
   height:320px;
 
 }
+

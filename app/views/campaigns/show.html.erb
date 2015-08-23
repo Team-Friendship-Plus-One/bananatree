@@ -7,8 +7,11 @@
           <h4><i class="fa">Current Total: <%= number_to_currency(@campaign.current_total) %> / Campaign Goal: <%= number_to_currency(@campaign.goal) %></i></h4>
         </div>
         <div class="progress">
+        <% if @campaign.current_total == nil %>
+        <% @campaign.current_total = 10 %>
           <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:<%= (@campaign.current_total / @campaign.goal).to_f * 100 %>%"><i class="fa fa-heart"></i> <%= ((@campaign.current_total / @campaign.goal).to_f * 100).round(2) %>% Funded!
           </div>
+          <% end %>
       </div>
       <div class="donate">
         <button type="button" class="btn-donate" data-toggle="modal" data-target="#<%= @campaign.id %>"><i class="fa fa-usd"> Donate Now!</i></button>
