@@ -1,12 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
 
-  resources :cities
-
-  devise_for :users do
-    resources :donations
-  end
-
   resources :campaigns do
     resources :donations
   end
