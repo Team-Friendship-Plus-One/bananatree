@@ -45,6 +45,10 @@
       <%= select_month(Date.new(Date.today.year, 1).beginning_of_month, {use_two_digit_numbers: true}, {id: 'cc-exp-month'}) %>
       <%= select_year(Date.today+5, {start_year: Date.today.year, end_year: Date.today.year+10}, {id: 'cc-exp-year'}) %>
     </div>
+    <div>
+      <%= label_tag('donation-amount', 'Donation Amount: $') %>
+      <%= text_field_tag('donation-amount', nil, maxlength: 20, autocomplete: 'off', autofocus: true, value: '100') %>
+    </div>
     <div id="submit-box">
       <%= submit_tag('Process Payment', id: 'process-payment-btn') %>
     </div>

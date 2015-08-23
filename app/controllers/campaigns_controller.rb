@@ -14,7 +14,7 @@ class CampaignsController < ApplicationController
 
   def pay
     payment = Simplify::Payment.create({
-        amount: '1000',
+        amount: params['donation-amount'].to_f * 100,
         token: params['simplifyToken'],
         description: 'Simplify Rails Example',
         currency: 'USD'})

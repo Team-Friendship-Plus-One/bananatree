@@ -25,7 +25,8 @@ ready = ->
                 cvc: $('#cc-cvc').val(),
                 expMonth: $('#cc-exp-month').val(),
                 expYear: $('#cc-exp-year').val().slice(-2)
-            }
+            },
+            amount: $('#donation-amount').val(),
         }, simplifyResponseHandler
         false
 
