@@ -21,19 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :goal %><br>
-    <%= f.text_field :goal %>
-  </div>
-  <div class="field">
-    <%= f.label :funded %><br>
-    <%= f.check_box :funded %>
-  </div>
-  <div class="field">
-    <%= f.label :current_total %><br>
-    <%= f.text_field :current_total %>
+    <%= f.number_field :goal %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.collection_select :location, City.all, :id, :city, :prompt => "Select City.." %>
   </div>
   <div class="actions">
     <%= f.submit %>
