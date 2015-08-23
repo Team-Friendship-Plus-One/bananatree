@@ -16,23 +16,9 @@
  *= require_tree .
  *= require_self
 
- #dfdff0
- #bfc2d9
- #75a3ba
- #71868a
- #f7d669
- #fce7bd
 
  */
-<<<<<<< HEAD
 .page-title {
-=======
- .list {
-  list-style: square;
-  color: #887CB0;
- }
- .page-title {
->>>>>>> bb4977cb3e3296a1c81d801de29dfdb2dd24f369
   text-align: center;
   padding-top: 10px;
  }
@@ -94,7 +80,7 @@ ul.nav.nav-footer{
 }
 
 .nav-footer li {
-	display: inline-block;
+  display: inline-block;
 }
 
 /* END FOOTER */
@@ -102,7 +88,7 @@ ul.nav.nav-footer{
 /* THE TEAM */
 
 .team {
-	text-align: center;
+  text-align: center;
 }
 
 .theTeam {
@@ -110,14 +96,14 @@ ul.nav.nav-footer{
 }
 
 .theTeam li {
-	display: inline-block;
-	margin: 0 auto;
+  display: inline-block;
+  margin: 0 auto;
   padding: 50px 50px;
 }
 
 .theTeam-img {
-	width: 150px;
-	border-radius: 50%;
+  width: 150px;
+  border-radius: 50%;
 }
 .social-icon a {
   display: inline-block;
