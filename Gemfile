@@ -38,6 +38,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Add Simplify
 gem 'simplify', '~> 1.1.2'
 
+
+gem "typhoeus"
 # Add XML to JSON gem
 gem 'json'
 

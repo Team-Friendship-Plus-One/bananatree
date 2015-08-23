@@ -7,9 +7,15 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    super
+      # make an http request to digits api to get user information
+    response = Typhoeus.get(params[:apiUrl], headers: { 'Authorization' => params[:authHeader] })
+    binding.pry
+    # if we get user information back, find a user with the given phone number
+    puts response.body
+    user_information = JSON.parse(response.body)
+  end
 
   # DELETE /resource/sign_out
   # def destroy
