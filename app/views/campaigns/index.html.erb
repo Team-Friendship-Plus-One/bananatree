@@ -1,6 +1,8 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
     <% @campaigns.each do |campaign| %>
+      <% if campaign.current_total == nil %>
+        <% campaign.current_total = 10 %>
     <a href="/campaigns/<%= campaign.id %>" class="campaign-id">
       <div class="campaign-info campaign-index-info">
         <h1 class="campaignCity"><i class="fa fa-map-marker"> <%= campaign.title %></i></h1>
@@ -15,4 +17,6 @@
       </div>
     </a>
   <% end %>
+    <% end %>
+
 </div>
