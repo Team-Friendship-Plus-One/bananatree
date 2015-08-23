@@ -1,3 +1,87 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+img.profile{
+  width: 220px;
+}
+h6{
+color: white;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+font-weight: 100;
+margin-left: 5px;
+}
+h3.profileName{
+text-transform: uppercase;
+letter-spacing: 0.06em;
+margin-left: 5px;
+display: inline-block
+}
+h4.profileLocation{
+text-transform: uppercase;
+letter-spacing: 0.05em;
+margin-left: 50px;
+display: inline-block
+}
+span.crop{
+display: inline-block;
+position: relative;
+width: 208px;
+height: 208px;
+border-radius: 100px;
+overflow: hidden;
+}
+
+div#countdown{
+
+}
+
+div.boxOne{
+height:100px;
+background-color: #E8313A;
+}
+div.boxTwo{
+background-color: #E85A61;
+height:100px;
+
+}
+
+
+@media(max-width: 505px) {
+  img.profile{
+  width: 220px;
+}
+
+h3.profileName{
+text-transform: uppercase;
+letter-spacing: 0.06em;
+margin-left: 5px;
+}
+h4.profileLocation{
+text-transform: uppercase;
+letter-spacing: 0.05em;
+margin-left: 50px;
+}
+span.crop{
+display: inline-block;
+position: relative;
+width: 208px;
+height: 208px;
+border-radius: 100px;
+overflow: hidden;
+}
+
+div#countdown{
+
+}
+
+div.boxOne{
+height:100px;
+background-color: #E8313A;
+}
+div.boxTwo{
+background-color: #E85A61;
+height:100px;
+
+}
+}

@@ -1,1 +1,26 @@
-<h2>Welcome!!! <%= current_user.name %></h2>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-offset-4 col-sm-offset-4 col-md-offset-6">
+
+      <span class="crop">
+        <img class="profile" src=<%= current_user.image %> alt="">
+      </span>
+    </div>
+  </div>
+
+      <h3 class="profileName"><%= current_user.name %></h3>
+      <h4 class="profileLocation"><%= current_user.location %></h4>
+  <div class="row" id="countdown">
+    <div class="col-xs-6 col-sm-6 col-md-6 boxOne">
+    <h6>Donations Contributed:</h6>
+    <h6><%= current_user.donations if current_user.donations != []%></h6>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 boxTwo">
+     <h6>Amount Donated so far:</h6>
+     <% if  %>
+      <h6><%= current_user.donations if current_user.donations != []%></h6>
+      <% end %>
+    </div>
+
+  </div>
