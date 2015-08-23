@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
   <div class="nav">
   <% if current_user != nil %>
   Signed in as <strong><%= current_user.email %></strong>!
@@ -18,5 +19,7 @@
 <%= yield %>
 
 <%= render 'layouts/footer' %>
+<%binding.pry %>
+
 </body>
 </html>
