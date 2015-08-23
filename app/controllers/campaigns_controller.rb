@@ -20,6 +20,21 @@ class CampaignsController < ApplicationController
         currency: 'USD'})
 
     @message = payment['paymentStatus']
+    campaignId = params[:campaignId][:id].to_i
+
+    currentCampaign = Campaign.find_by(:id => campaignId)
+    currentCampaign.current_total = currentCampaign.current_total.to_d + params["donation-amount"].to_d
+    currentCampaign.save
+
+    if current_user != nil 
+      newDonation = current_user.donations.new
+    else
+      newDonation = Donation.new
+    end
+      newDonation.amount = params["donation-amount"].to_d
+      newDonation.campaign_id = campaignId
+      newDonation.save
+
     redirect_to '/campaigns'
   end
 
