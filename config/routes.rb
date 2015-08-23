@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
   root 'home#index'
   get '/team' => 'home#team'
-  devise_for :users
+  resources :cities
+
+  devise_for :users do
+    resources :donations
+  end
+
   resources :campaigns do
     resources :donations
   end
-  resources :users do
-    resources :donations
-  end
+
   resources :clients
-  resources :donations
 end
 # Prefix Verb   URI Pattern                                          Controller#Action
 #   root GET    /                                                    home#index

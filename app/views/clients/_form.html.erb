@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.collection_select :location, City.all, :id, :city, :prompt => "Select City.." %>
   </div>
   <div class="field">
     <%= f.label :special_notes %><br>
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
+    <%= f.select :gender, [["Male", "Male"], ["Female", "Female"], ["Other", "Choose not to Identify"]], {:prompt => 'Select Gender'} %>
   </div>
   <div class="field">
     <%= f.label :picture %><br>
@@ -46,10 +46,6 @@
   <div class="field">
     <%= f.label :goals %><br>
     <%= f.text_field :goals %>
-  </div>
-  <div class="field">
-    <%= f.label :campaign_id %><br>
-    <%= f.number_field :campaign_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
