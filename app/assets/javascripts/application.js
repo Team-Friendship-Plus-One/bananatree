@@ -12,5 +12,24 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap.min.js
 //= require turbolinks
 //= require_tree .
+//
+
+// $(document).ready(function() {
+// 	$('#process-payment-btn').on('click', function() {
+// 		var url = $('#simplify-payment-form').attr('action');
+// 		console.log("URL", url);
+// 		var id = $(this).closest(".campaignId");
+// 		id = parseInt(id.attr('id'));
+// 		dataId = {campaginID: id}
+// 		console.log(id);
+
+// 		$.ajax({
+// 			url: "/campaigns/pay",
+// 			type: "POST",
+// 			data: JSON.stringify(dataId)
+// 		});
+// 	});
+// });

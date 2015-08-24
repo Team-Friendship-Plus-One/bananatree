@@ -1,0 +1,84 @@
+/*
+ #dfdff0
+ #bfc2d9
+ #75a3ba
+ #71868a
+ #f7d669
+ #fce7bd
+*/
+
+.campaign-id:hover {
+	box-shadow: 0;
+	text-decoration: none;
+}
+
+.campaign-info {
+	margin: 30px auto;
+	max-width: 800px;
+	text-align: center;
+	background-color: #dfdff0;
+	padding: 30px;
+	-moz-box-shadow: 10px 10px 10px #aaa;
+	-webkit-box-shadow: 10px 10px 10px #aaa;
+	box-shadow: 10px 10px 10px #aaa;
+	border-radius: 5px;
+}
+
+.campaign-index-info:hover {
+	background-color: #dfdff9;
+}
+
+.campaign-index-info:active {
+	box-shadow: none;
+	background-color:  #dfdff8;
+}
+
+.progress {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.btn-donate {
+	margin: 20px 0;
+	height: 75px;
+	font-size: 32px;
+	padding: 10px;
+	background-color: #7fb3da;
+	-moz-box-shadow: 4px 4px 10px #aaa;
+	-webkit-box-shadow: 4px 4px 10px #aaa;
+	box-shadow: 4px 4px 10px #aaa;
+}
+
+.btn-donate:hover {
+	background-color: #7fb3f9;
+}
+
+.modal-content {
+	padding: 50px;
+	display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#buy-with-masterpass-div {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.paymentForm {
+	width: 400px;
+	margin: 0 auto;
+}
+
+.progress {
+	height: 50px;
+}
+
+.progress-bar {
+	font-size: 24px;
+	line-height: 48px;
+}
+
+.campaignCity {
+	color: #337ab7;
+}

@@ -1,0 +1,62 @@
+
+<div class="container-fluid" id="belowNav">
+  <div class="row">
+    <div class="center-me">
+
+      <span class="crop">
+        <img class="profile" src=<%= current_user.image %> alt="">
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <h3 class="profileName"><%= current_user.name %></h3>
+      <a href="https://twitter.com/"<%= current_user.username %> >
+        <img id="twitter" src="https://upload.wikimedia.org/wikipedia/en/9/9f/Twitter_bird_logo_2012.svg" alt="">
+      </a>
+    </div>
+  </div>
+<div class="row">
+    <div class=" col-xs-12 col-sm-12 col-md-12">
+        <h3 class="profileLocation"><%= current_user.location %></h3>
+    </div>
+</div>
+  <div class="row" id="countdown">
+    <div class="col-xs-6 col-sm-6 col-md-6 boxOne">
+    <h6>Campaign Contributed:</h6>
+    <% if current_user.donations != [] %>
+    <h1><%= current_user.donations.all.each do |donation| %>
+      <%= donation.amount %>
+      
+    <% end %>
+  </h1>
+    <% else %>
+    <h1> 0 </h1>
+    <% end %>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 boxTwo">
+     <h6>Amount Donated so far:</h6>
+     <% if current_user.donations != [] %>
+      <h6><%= current_user.donations %></h6>
+      <% else %>
+      <h1>$0.00</h1>
+      <% end %>
+    </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <h3 class="donationHistory">Donation History:</h3>
+      </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 box">
+          <% if current_user.donations != [] %>
+            <h5><%= current_user.donations %></h5>
+            <% else %>
+            <p class="space">Looks like you haven't contributed. </p>
+            <h3 class="donationHistory">Be sure to check out our current
+            <%= link_to "CAMPAIGNS", campaigns_path %></h3>
+
+    <% end %>
+
+
+    </div>
+  </div>
+
