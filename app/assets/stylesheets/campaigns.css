@@ -13,11 +13,11 @@
 }
 
 .campaign-info {
-	margin: 10px auto;
+	margin: 30px auto;
 	max-width: 800px;
 	text-align: center;
 	background-color: #dfdff0;
-	padding: 50px;
+	padding: 30px;
 	-moz-box-shadow: 10px 10px 10px #aaa;
 	-webkit-box-shadow: 10px 10px 10px #aaa;
 	box-shadow: 10px 10px 10px #aaa;

@@ -12,6 +12,7 @@ class CampaignsController < ApplicationController
   # GET /campaigns/1.json
   def show
     @campaign = Campaign.find(params[:id])
+    @clients = Client.where({:location => @campaign.location})
   end
 
   def pay

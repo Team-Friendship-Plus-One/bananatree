@@ -1,7 +1,7 @@
 
 <div class="container-fluid" id="belowNav">
   <div class="row">
-    <div class="col-xs-offset-4 col-sm-offset-4 col-md-offset-6">
+    <div class="center-me">
 
       <span class="crop">
         <img class="profile" src=<%= current_user.image %> alt="">
@@ -25,7 +25,11 @@
     <div class="col-xs-6 col-sm-6 col-md-6 boxOne">
     <h6>Campaign Contributed:</h6>
     <% if current_user.donations != [] %>
-    <h1><%= current_user.donations if current_user.donations != []%></h1>
+    <h1><%= current_user.donations.all.each do |donation| %>
+      <%= donation.amount %>
+      
+    <% end %>
+  </h1>
     <% else %>
     <h1> 0 </h1>
     <% end %>

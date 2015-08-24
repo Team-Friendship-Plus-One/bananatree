@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
       user.password = Devise.friendly_token[0,20]
       user.username = auth.info.nickname   # assuming the user model has a name
       user.name = auth.info.name
-      user.image = auth.info.image[0...-12]+".jpeg" # assuming the user model has an image
+      user.image = "https://pbs.twimg.com/profile_images/631938711123431424/w4IR5c8i.jpg" # assuming the user model has an image
       user.oauth_token = auth.credentials.token
       user.uid = auth.uid
       user.provider = auth.provider
