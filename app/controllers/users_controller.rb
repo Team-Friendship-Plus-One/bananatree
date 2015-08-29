@@ -18,7 +18,9 @@ class UsersController < ApplicationController
       @total_donation += current_user.donations[idx].amount
       idx += 1
     end
-    puts @total_donation
+    @donations.each do |donation|
+      puts donation[:amount]
+    end
   end
 
   # GET /users/:id/edit

@@ -24,9 +24,7 @@
   <div class="row" id="countdown">
     <div class="col-xs-6 col-sm-6 col-md-6 boxOne">
     <h6>Campaign Contributed:</h6>
-    <% if current_user.donations.length == 1 %>
-        <h1><%= number_to_currency(@donations.amount) %></h1>
-    <% elsif current_user.donations.length > 1 %>
+    <% if current_user.donations.length >= 1 %>
       <% @donations.each do |donation| %>
         <h1><%= number_to_currency(donation[:amount]) %></h1>
       <% end %>
@@ -48,18 +46,7 @@
     </div>
   </div>
   <div class="box">
-          <% if current_user.donations == 1 %>
-            <table class="donationTable">
-              <tr>
-                <th>Donation Amount</th
-                <th>Campaign</th>
-              </tr>
-              <tr>
-                <td><a href="/campaigns/<%= @donations.campaign_id %>">Campaign</a></td>
-                <td><%= number_to_currency(@donations.amount) %></td>
-              </tr>
-            </table>
-          <% elsif current_user.donations.length > 1 %>
+          <% if current_user.donations.length >= 1 %>
             <% @donations.each do |donation| %>
               <table class="donationTable">
                 <tr>
