@@ -29,22 +29,4 @@ ready = ->
             amount: $('#donation-amount').val(),
         }, simplifyResponseHandler
         false
-    SimplifyCommerce.addMasterPassCheckoutButton("buy-with-masterpass-div", "sbpb_ZDE4NzAyY2EtYzQ0MC00YzllLWJmN2UtODcyM2MxMzhhYmJk", masterPassResponseHandler, masterPassCanceledHandler)
-    masterPassResponseHandler = (data, status) ->
-    $paymentForm = $("#simplify-payment-form")
-    $(".error").remove()
-    if data.error
-        if data.error.code == "validation" 
-            fieldErrors = data.error.fieldErrors fieldErrorsLength = fieldErrors.length, errorList = "";
-            for i in fieldErrorsLength
-                errorList += "<div class='error'>Field: '" + fieldErrors[i].field + "' is invalid - " + fieldErrors[i].message + "</div>"
-            $paymentForm.after(errorList)
-    else 
-        token = data.cardToken["id"];
-        $paymentForm.append("<input type='hidden' name='simplifyToken' value='" + token + "' />");
-        $paymentForm.get(0).submit();
-    masterPassCanceledHandler = () ->
-    console.log ("MasterPass canceled")
-    return
-
 $(document).ready(ready)

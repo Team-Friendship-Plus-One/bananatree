@@ -9,6 +9,18 @@ class UsersController < ApplicationController
     # authorize! :read, @user
   end
 
+  def show
+    idx = 0
+    @donations = []
+    @total_donation = 0
+    while idx < current_user.donations.length
+      @donations.push(id: current_user.donations[idx].id, amount: current_user.donations[idx].amount, campaignId: current_user.donations[idx].campaign_id)
+      @total_donation += current_user.donations[idx].amount
+      idx += 1
+    end
+    puts @total_donation
+  end
+
   # GET /users/:id/edit
   def edit
     # authorize! :update, @user

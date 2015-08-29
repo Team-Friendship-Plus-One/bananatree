@@ -40,7 +40,19 @@ h3.donationHistory{
   font-weight: 100;
   margin-left: 5px;
   display: block;
-  float: left;
+  text-align: center;
+}
+.donationsHistory {
+  color: white;
+}
+.donationsHistory th {
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+
+.donationTable {
+  width: 500px;
+  margin: 0 auto;
 }
 span.crop{
   display: inline-block;
@@ -58,24 +70,27 @@ div#countdown{
   margin-left: 10px;
 }
 div.box{
-  height:100px;
+  min-height: 100px;
+  max-width: 600px;
+  margin: 0 auto;
   background-color: #261758;
+  color: white;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 div.boxOne{
-  height:100px;
+  min-height:100px;
   background-color: #261758;
 }
 div.boxTwo{
   background-color: #605292;
-  height:100px;
+  min-height:100px;
 }
 #twitter{
   width: 30px;
   margin-left: 48%;
 }
-
 
 @media(max-width: 505px) {
   img.profile{
