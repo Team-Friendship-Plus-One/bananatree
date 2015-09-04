@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
 
   get '/team' => 'home#team'
+  get '/contact' => 'home#contact'
   resources :cities
 
   resources :campaigns do

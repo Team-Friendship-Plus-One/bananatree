@@ -113,7 +113,12 @@ ul.nav.nav-footer{
   width: 150px;
   border-radius: 50%;
 }
-.social-icon a {
+
+.social-image {
+  width: 40px;
+  height: 40px;
+}
+.social-icon a{
   display: inline-block;
 }
 
